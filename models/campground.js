@@ -23,7 +23,6 @@ const CampgroundSchema = new Schema({
 // TODO: Need middleware for deleteMany used when seeding db
 
 CampgroundSchema.post('findOneAndDelete', async function(doc) {
-    console.log('DELETEEEEEEE')
     if (doc) {
         await Review.deleteMany({ _id: { $in: doc.reviews } })
     }
