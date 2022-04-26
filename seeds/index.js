@@ -24,7 +24,17 @@ const seedDB = async () => {
             author: "625cecc6edfb70f5318771b6",
             title: `${sample(descriptors)} ${sample(places)}`,
             location: `${cities[randomSeed].city}, ${cities[randomSeed].state}`,
-            image: 'https://source.unsplash.com/collection/483251',
+            geometry: { type : "Point", coordinates : [ -87.6244, 41.8756 ] },
+            images: [
+                {
+                  url: 'https://res.cloudinary.com/dw3te2cwp/image/upload/v1650758544/yelp_camp/ndtnio8orebepidxktdt.jpg',
+                  filename: 'yelp_camp/ndtnio8orebepidxktdt',
+                },
+                {
+                  url: 'https://res.cloudinary.com/dw3te2cwp/image/upload/v1650758544/yelp_camp/mhget6mslsl9ybw1gam5.jpg',
+                  filename: 'yelp_camp/mhget6mslsl9ybw1gam5',
+                }
+            ],
             price: Math.floor(Math.random() * 20) + 10,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nisi natus praesentium necessitatibus? Repellat, nam autem? Qui voluptatum saepe unde voluptate, consequuntur quibusdam minima, quisquam autem enim obcaecati dolores. Maxime.'
         })
